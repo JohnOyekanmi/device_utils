@@ -1,7 +1,7 @@
 name: device_utils
 description: "A Flutter plugin for Android device application management, providing functionality to list installed apps, launch system applications, and manage app settings."
 version: 0.0.1
-homepage:
+homepage: https://github.com/JohnOyekanmi/device_utils
 
 environment:
   sdk: ^3.6.1

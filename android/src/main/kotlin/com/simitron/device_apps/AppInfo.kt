@@ -1,4 +1,4 @@
-package com.simitron.device_utils
+package com.simitron.device_apps
 
 data class AppInfo(
     val packageName: String,

@@ -1,4 +1,4 @@
-import 'device_utils_platform_interface.dart';
+import 'device_apps_platform_interface.dart';
 import 'models/app_info.dart';
 import 'models/app_type.dart';
 import 'models/system_apps.dart';
@@ -8,10 +8,10 @@ export 'models/app_info.dart';
 export 'models/app_type.dart';
 export 'models/system_apps.dart';
 
-class DeviceUtils {
+class DeviceApps {
   /// Returns the current platform version.
   static Future<String?> getPlatformVersion() {
-    return DeviceUtilsPlatform.instance.getPlatformVersion();
+    return DeviceAppsPlatform.instance.getPlatformVersion();
   }
 
   /// Gets a list of installed applications.
@@ -25,7 +25,7 @@ class DeviceUtils {
     bool includeIcons = false,
   }) async {
     final List<Map<String, dynamic>> response =
-        await DeviceUtilsPlatform.instance.getInstalledApps(
+        await DeviceAppsPlatform.instance.getInstalledApps(
       appType: appType.name,
       includeIcons: includeIcons,
     );
@@ -40,7 +40,7 @@ class DeviceUtils {
   ///
   /// See [SystemApps] for a list of supported system applications.
   static Future<void> openSystemApp(String appName) {
-    return DeviceUtilsPlatform.instance.openSystemApp(appName);
+    return DeviceAppsPlatform.instance.openSystemApp(appName);
   }
 
   /// Launches an application by its package name.
@@ -48,7 +48,7 @@ class DeviceUtils {
   /// [packageName] is the full package name of the app (e.g., 'com.example.app').
   /// Throws an exception if the app cannot be launched.
   static Future<void> launchApp(String packageName) {
-    return DeviceUtilsPlatform.instance.launchApp(packageName);
+    return DeviceAppsPlatform.instance.launchApp(packageName);
   }
 
   /// Opens the system settings page for an application.
@@ -56,6 +56,6 @@ class DeviceUtils {
   /// [packageName] is the full package name of the app (e.g., 'com.example.app').
   /// Throws an exception if the settings cannot be opened.
   static Future<void> openAppSettings(String packageName) {
-    return DeviceUtilsPlatform.instance.openAppSettings(packageName);
+    return DeviceAppsPlatform.instance.openAppSettings(packageName);
   }
 }

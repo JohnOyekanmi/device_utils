@@ -1,15 +1,16 @@
+import 'package:device_apps/device_apps_method_channel.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:device_utils/device_utils_method_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelDeviceUtils platform = MethodChannelDeviceUtils();
-  const MethodChannel channel = MethodChannel('device_utils');
+  MethodChannelDeviceApps platform = MethodChannelDeviceApps();
+  const MethodChannel channel = MethodChannel('device_apps');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
         return '42';
@@ -18,7 +19,8 @@ void main() {
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('getPlatformVersion', () async {
@@ -30,15 +32,15 @@ void main() {
   });
 
   test('openSystemApp', () async {
-    await platform.openSystemApp('com.simitron.device_utils');
+    await platform.openSystemApp('com.simitron.device_apps');
   });
 
   test('launchApp', () async {
-    await platform.launchApp('com.simitron.device_utils');
+    await platform.launchApp('com.simitron.device_apps');
   });
 
   test('openAppSettings', () async {
-    await platform.openAppSettings('com.simitron.device_utils');
+    await platform.openAppSettings('com.simitron.device_apps');
   });
 
   test('getInstalledApps with appType', () async {
@@ -50,10 +52,10 @@ void main() {
   });
 
   test('openSystemApp', () async {
-    await platform.openSystemApp('com.simitron.device_utils');
+    await platform.openSystemApp('com.simitron.device_apps');
   });
 
   test('launchApp', () async {
-    await platform.launchApp('com.simitron.device_utils');
+    await platform.launchApp('com.simitron.device_apps');
   });
 }

@@ -1,4 +1,4 @@
-package com.simitron.device_utils
+package com.simitron.device_apps
 
 import android.content.Context
 import androidx.annotation.NonNull
@@ -10,8 +10,8 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import android.util.Log
 
-/** DeviceUtilsPlugin */
-class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
+/** DeviceAppsPlugin */
+class DeviceAppsPlugin: FlutterPlugin, MethodCallHandler {
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -21,7 +21,7 @@ class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     context = flutterPluginBinding.applicationContext
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "device_utils")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "device_apps")
     channel.setMethodCallHandler(this)
   }
 
@@ -114,7 +114,7 @@ class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
 
 
 
-// package com.simitron.device_utils
+// package com.simitron.device_apps
 
 // import android.content.Context
 // import androidx.annotation.NonNull
@@ -125,8 +125,8 @@ class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
 // import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 // import io.flutter.plugin.common.MethodChannel.Result
 
-// /** DeviceUtilsPlugin */
-// class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
+// /** DeviceAppsPlugin */
+// class DeviceAppsPlugin: FlutterPlugin, MethodCallHandler {
 //   /// The MethodChannel that will the communication between Flutter and native Android
 //   ///
 //   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -134,7 +134,7 @@ class DeviceUtilsPlugin: FlutterPlugin, MethodCallHandler {
 //   private lateinit var channel : MethodChannel
 
 //   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-//     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "device_utils")
+//     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "device_apps")
 //     channel.setMethodCallHandler(this)
 //   }
 

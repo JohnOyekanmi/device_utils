@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.simitron.device_utils">
+  package="com.simitron.device_apps">
   <queries>
     <intent>
         <action android:name="android.intent.action.VIEW_CALENDAR"/>

@@ -1,4 +1,4 @@
-package com.simitron.device_utils
+package com.simitron.device_apps
 
 import android.content.Context
 import android.content.Intent

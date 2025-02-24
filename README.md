@@ -1,4 +1,4 @@
-# device_utils
+# device_apps
 
 A Flutter plugin for managing device applications, including fetching installed apps, launching system apps, and handling app settings. Currently supports Android devices only.
 
@@ -32,15 +32,15 @@ Add these permissions to your Android Manifest (`android/app/src/main/AndroidMan
 
 ```yaml
 dependencies:
-  device_utils: ^latest_version
+  device_apps: ^latest_version
 ```
 
 ## Usage
 
 ### Import the package
 ```dart
-import 'package:device_utils/device_utils.dart';
-import 'package:device_utils/models/system_apps.dart';
+import 'package:device_apps/device_apps.dart';
+import 'package:device_apps/models/system_apps.dart';
 ```
 
 ### Get Installed Applications

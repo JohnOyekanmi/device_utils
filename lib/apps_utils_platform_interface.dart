@@ -1,24 +1,24 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'device_apps_method_channel.dart';
+import 'apps_utils_method_channel.dart';
 
-abstract class DeviceAppsPlatform extends PlatformInterface {
+abstract class AppsUtilsPlatform extends PlatformInterface {
   /// Constructs a DeviceUtilsPlatform.
-  DeviceAppsPlatform() : super(token: _token);
+  AppsUtilsPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static DeviceAppsPlatform _instance = MethodChannelDeviceApps();
+  static AppsUtilsPlatform _instance = MethodChannelAppsUtils();
 
-  /// The default instance of [DeviceAppsPlatform] to use.
+  /// The default instance of [AppsUtilsPlatform] to use.
   ///
-  /// Defaults to [MethodChannelDeviceApps].
-  static DeviceAppsPlatform get instance => _instance;
+  /// Defaults to [MethodChannelAppsUtils].
+  static AppsUtilsPlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [DeviceAppsPlatform] when
+  /// platform-specific class that extends [AppsUtilsPlatform] when
   /// they register themselves.
-  static set instance(DeviceAppsPlatform instance) {
+  static set instance(AppsUtilsPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

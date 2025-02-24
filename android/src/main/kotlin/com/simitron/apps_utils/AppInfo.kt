@@ -1,4 +1,4 @@
-package com.simitron.device_apps
+package com.simitron.apps_utils
 
 data class AppInfo(
     val packageName: String,
@@ -13,7 +13,6 @@ data class AppInfo(
             "isSystemApp" to isSystemApp,
             "icon" to icon
         )
-        android.util.Log.d("AppInfo", "Converting to map for $appName: $map")
         return map
     }
 

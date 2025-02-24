@@ -1,7 +1,7 @@
-name: device_apps
+name: apps_utils
 description: "A Flutter plugin for Android device application management, providing functionality to list installed apps, launch system applications, and manage app settings."
 version: 0.0.1
-homepage: https://github.com/JohnOyekanmi/device_apps
+homepage: https://github.com/JohnOyekanmi/apps_utils
 
 environment:
   sdk: ^3.6.1
@@ -40,8 +40,8 @@ flutter:
     # https://flutter.dev/to/pubspec-plugin-platforms
     # -------------------
       android:
-        package: com.simitron.device_apps
-        pluginClass: DeviceAppsPlugin
+        package: com.simitron.apps_utils
+        pluginClass: AppsUtilsPlugin
     # -------------------
 
   # To add assets to your plugin package, add an assets section, like this:

@@ -1,4 +1,4 @@
-package com.simitron.device_apps
+package com.simitron.apps_utils
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,7 @@ import android.graphics.drawable.Drawable
 import java.io.ByteArrayOutputStream
 import android.util.Log
 
-import com.simitron.device_apps.AppInfo
+import com.simitron.apps_utils.AppInfo
 
 class AppFetcher(private val context: Context) {
     /// Get all installed apps.

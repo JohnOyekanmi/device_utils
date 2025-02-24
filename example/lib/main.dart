@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:device_apps/device_apps.dart';
+import 'package:apps_utils/apps_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await DeviceApps.getPlatformVersion() ?? 'Unknown platform version';
+          await AppsUtils.getPlatformVersion() ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

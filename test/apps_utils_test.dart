@@ -1,12 +1,12 @@
-import 'package:device_apps/device_apps.dart';
-import 'package:device_apps/device_apps_method_channel.dart';
-import 'package:device_apps/device_apps_platform_interface.dart';
+import 'package:apps_utils/apps_utils.dart';
+import 'package:apps_utils/apps_utils_method_channel.dart';
+import 'package:apps_utils/apps_utils_platform_interface.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockDeviceUtilsPlatform
     with MockPlatformInterfaceMixin
-    implements DeviceAppsPlatform {
+    implements AppsUtilsPlatform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 
@@ -28,16 +28,16 @@ class MockDeviceUtilsPlatform
 }
 
 void main() {
-  final DeviceAppsPlatform initialPlatform = DeviceAppsPlatform.instance;
+  final AppsUtilsPlatform initialPlatform = AppsUtilsPlatform.instance;
 
-  test('$MethodChannelDeviceApps is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelDeviceApps>());
+  test('$MethodChannelAppsUtils is the default instance', () {
+    expect(initialPlatform, isInstanceOf<MethodChannelAppsUtils>());
   });
 
   test('getPlatformVersion', () async {
     MockDeviceUtilsPlatform fakePlatform = MockDeviceUtilsPlatform();
-    DeviceAppsPlatform.instance = fakePlatform;
+    AppsUtilsPlatform.instance = fakePlatform;
 
-    expect(await DeviceApps.getPlatformVersion(), '42');
+    expect(await AppsUtils.getPlatformVersion(), '42');
   });
 }

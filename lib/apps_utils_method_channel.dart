@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'device_apps_platform_interface.dart';
+import 'apps_utils_platform_interface.dart';
 
-/// An implementation of [DeviceAppsPlatform] that uses method channels.
-class MethodChannelDeviceApps extends DeviceAppsPlatform {
+/// An implementation of [AppsUtilsPlatform] that uses method channels.
+class MethodChannelAppsUtils extends AppsUtilsPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('device_apps');
+  final methodChannel = const MethodChannel('apps_utils');
 
   @override
   Future<String?> getPlatformVersion() async {

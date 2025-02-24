@@ -1,4 +1,4 @@
-import 'device_apps_platform_interface.dart';
+import 'apps_utils_platform_interface.dart';
 import 'models/app_info.dart';
 import 'models/app_type.dart';
 import 'models/system_apps.dart';
@@ -8,10 +8,10 @@ export 'models/app_info.dart';
 export 'models/app_type.dart';
 export 'models/system_apps.dart';
 
-class DeviceApps {
+class AppsUtils {
   /// Returns the current platform version.
   static Future<String?> getPlatformVersion() {
-    return DeviceAppsPlatform.instance.getPlatformVersion();
+    return AppsUtilsPlatform.instance.getPlatformVersion();
   }
 
   /// Gets a list of installed applications.
@@ -25,7 +25,7 @@ class DeviceApps {
     bool includeIcons = false,
   }) async {
     final List<Map<String, dynamic>> response =
-        await DeviceAppsPlatform.instance.getInstalledApps(
+        await AppsUtilsPlatform.instance.getInstalledApps(
       appType: appType.name,
       includeIcons: includeIcons,
     );
@@ -40,7 +40,7 @@ class DeviceApps {
   ///
   /// See [SystemApps] for a list of supported system applications.
   static Future<void> openSystemApp(String appName) {
-    return DeviceAppsPlatform.instance.openSystemApp(appName);
+    return AppsUtilsPlatform.instance.openSystemApp(appName);
   }
 
   /// Launches an application by its package name.
@@ -48,7 +48,7 @@ class DeviceApps {
   /// [packageName] is the full package name of the app (e.g., 'com.example.app').
   /// Throws an exception if the app cannot be launched.
   static Future<void> launchApp(String packageName) {
-    return DeviceAppsPlatform.instance.launchApp(packageName);
+    return AppsUtilsPlatform.instance.launchApp(packageName);
   }
 
   /// Opens the system settings page for an application.
@@ -56,6 +56,6 @@ class DeviceApps {
   /// [packageName] is the full package name of the app (e.g., 'com.example.app').
   /// Throws an exception if the settings cannot be opened.
   static Future<void> openAppSettings(String packageName) {
-    return DeviceAppsPlatform.instance.openAppSettings(packageName);
+    return AppsUtilsPlatform.instance.openAppSettings(packageName);
   }
 }

@@ -1,6 +1,6 @@
-# device_apps_example
+# apps_utils_example
 
-Demonstrates how to use the device_apps plugin.
+Demonstrates how to use the apps_utils plugin.
 
 ## Getting Started
 

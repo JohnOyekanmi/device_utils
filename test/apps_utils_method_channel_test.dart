@@ -1,12 +1,12 @@
-import 'package:device_apps/device_apps_method_channel.dart';
+import 'package:apps_utils/apps_utils_method_channel.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelDeviceApps platform = MethodChannelDeviceApps();
-  const MethodChannel channel = MethodChannel('device_apps');
+  MethodChannelAppsUtils platform = MethodChannelAppsUtils();
+  const MethodChannel channel = MethodChannel('apps_utils');
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
@@ -32,15 +32,15 @@ void main() {
   });
 
   test('openSystemApp', () async {
-    await platform.openSystemApp('com.simitron.device_apps');
+    await platform.openSystemApp('com.simitron.apps_utils');
   });
 
   test('launchApp', () async {
-    await platform.launchApp('com.simitron.device_apps');
+    await platform.launchApp('com.simitron.apps_utils');
   });
 
   test('openAppSettings', () async {
-    await platform.openAppSettings('com.simitron.device_apps');
+    await platform.openAppSettings('com.simitron.apps_utils');
   });
 
   test('getInstalledApps with appType', () async {
@@ -52,10 +52,10 @@ void main() {
   });
 
   test('openSystemApp', () async {
-    await platform.openSystemApp('com.simitron.device_apps');
+    await platform.openSystemApp('com.simitron.apps_utils');
   });
 
   test('launchApp', () async {
-    await platform.launchApp('com.simitron.device_apps');
+    await platform.launchApp('com.simitron.apps_utils');
   });
 }

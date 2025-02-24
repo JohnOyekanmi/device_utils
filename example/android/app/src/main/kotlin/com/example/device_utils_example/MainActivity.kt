@@ -1,4 +1,4 @@
-package com.simitron.device_apps_example
+package com.simitron.apps_utils_example
 
 import io.flutter.embedding.android.FlutterActivity
 
